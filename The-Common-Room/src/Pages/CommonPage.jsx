@@ -23,13 +23,18 @@ function CommonPage() {
 
   useEffect(() => {
     //fetch api results make api call
-    const apiResults = [
+    /* const apiResults = [
       { name: "harry potter", house: "Gryffendoor", image: "..." },
       { name: "Malfoy", house: "Slythern", image: "..." },
       { name: "tomiwa", house: "hufflepuff", image: "..." },
       { name: "Douglas", house: "Slythern", image: "..." },
-    ];
-    setFriends(apiResults);
+    ];*/
+    fetch("https://hp-api.onrender.com/api/characters/house/gryffindor")
+      .then((response) => response.json())
+      .then((data) => {
+        const dataWithImages = data.filter((friend) => friend.image !== "");
+        setFriends(dataWithImages);
+      });
   }, []);
 
   useEffect(() => {
