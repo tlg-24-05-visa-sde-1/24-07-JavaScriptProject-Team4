@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://cdn.vox-cdn.com/thumbor/4_1-oR-g89Wd8x38AjfBiCWScug=/46x0:765x539/920x613/filters:focal(46x0:765x539):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/47296314/great-hall.0.0.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+#form {
+  margin-top: 350px;
+}
