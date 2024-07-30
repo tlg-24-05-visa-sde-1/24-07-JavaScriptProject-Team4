@@ -1,9 +1,14 @@
+import FriendCard from "../Components/FriendCard/FriendCard";
 import HeaderCommonRoom from "../Components/HeaderCommonRoom";
 
-function CommonPage(){
+function CommonPage() {
   return (
-    <HeaderCommonRoom />
-  )
+    <div>
+      <HeaderCommonRoom />
+      <FriendCard />
+    </div>
+  );
 }
 
 export default CommonPage;
+
