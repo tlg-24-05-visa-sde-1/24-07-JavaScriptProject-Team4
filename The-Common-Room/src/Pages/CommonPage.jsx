@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FriendCard from "../Components/FriendCard/FriendCard";
-import PageHeader from "../Components/PageHeader";
+import HeaderCommonRoom from "../Components/HeaderCommonRoom";
 
 function CommonPage() {
   const [friends, setFriends] = useState([]);
@@ -23,12 +23,6 @@ function CommonPage() {
 
   useEffect(() => {
     //fetch api results make api call
-    /* const apiResults = [
-      { name: "harry potter", house: "Gryffendoor", image: "..." },
-      { name: "Malfoy", house: "Slythern", image: "..." },
-      { name: "tomiwa", house: "hufflepuff", image: "..." },
-      { name: "Douglas", house: "Slythern", image: "..." },
-    ];*/
     fetch("https://hp-api.onrender.com/api/characters/house/gryffindor")
       .then((response) => response.json())
       .then((data) => {
@@ -46,11 +40,7 @@ function CommonPage() {
 
   return (
     <div>
-<<<<<<< HEAD
       <HeaderCommonRoom name="Gryffindor" />
-      <FriendCard />
-=======
-      <PageHeader />
       {friendsList.length ? (
         friendsList.map((friendItem, index) => {
           return (
@@ -78,7 +68,6 @@ function CommonPage() {
             />
           );
         })} */}
->>>>>>> main
     </div>
   );
 }
