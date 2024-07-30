@@ -1,6 +1,7 @@
 import React from "react";
 
 function InputForm() {
+  
   return (
     <>
       <div className="form-floating mb-3">
@@ -33,7 +34,7 @@ function InputForm() {
           <option value="3">Peace</option>
         </select>
       </div>
-      <input className="btn btn-primary" type="submit" value="Submit"></input>
+      <input className="btn btn-primary" type="submit" value="Submit" onClick=""></input>
     </>
   );
 }
