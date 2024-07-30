@@ -1,14 +1,13 @@
 import FriendCard from "../Components/FriendCard/FriendCard";
 import HeaderCommonRoom from "../Components/HeaderCommonRoom";
 
-function CommonPage() {
+function RavenclawPage(){
   return (
     <div>
-      <HeaderCommonRoom name="Gryffindor" />
+      <HeaderCommonRoom name="Ravenclaw"/>
       <FriendCard />
     </div>
   );
 }
 
-export default CommonPage;
-
+export default RavenclawPage;

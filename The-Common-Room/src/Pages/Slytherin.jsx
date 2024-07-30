@@ -1,14 +1,13 @@
 import FriendCard from "../Components/FriendCard/FriendCard";
 import HeaderCommonRoom from "../Components/HeaderCommonRoom";
 
-function CommonPage() {
+function SlytherinPage() {
   return (
     <div>
-      <HeaderCommonRoom name="Gryffindor" />
+      <HeaderCommonRoom name="Slytherin"/>
       <FriendCard />
     </div>
-  );
+  )
 }
 
-export default CommonPage;
-
+export default SlytherinPage;

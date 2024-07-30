@@ -1,7 +1,7 @@
-function HeaderCommonRoom() {
+function HeaderCommonRoom({name}) {
   return (
     <>
-      <h1>Gryffindor Commom Room</h1>
+      <h1>{name} Commom Room</h1>
     </>
   );
 }
