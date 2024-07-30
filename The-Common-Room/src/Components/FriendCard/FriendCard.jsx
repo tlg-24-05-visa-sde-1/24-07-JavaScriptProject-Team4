@@ -1,6 +1,8 @@
 import "./FriendCard.css";
+import { useNavigate } from "react-router-dom";
 
-export default function FriendCard({ name, house, image, handleAddNewFriend }) {
+export default function FriendCard({ name, house, image, handleAddNewFriend}) {
+  let navigate = useNavigate();
   return (
     <div className="card">
       <img className="card-img-top" src={image} alt={name} />
@@ -11,7 +13,7 @@ export default function FriendCard({ name, house, image, handleAddNewFriend }) {
         <button onClick={handleAddNewFriend} className="btn btn-primary">
           Add New Friend
         </button>
-        <button className="btn btn-primary">Restart</button>
+        <button onClick={() => navigate("/")} className="btn btn-warning">Restart</button>
       </div>
     </div>
   );
