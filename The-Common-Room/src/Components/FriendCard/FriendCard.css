@@ -1,0 +1,86 @@
+/* Base styles for the card */
+.card {
+  max-width: 350px; /* Maximum width of the card */
+  margin: 20px auto; /* Center the card and add some vertical spacing */
+  border: 1px solid #ddd; /* Add a light border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Crop any overflowing content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px); /* Slightly lift the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensify shadow on hover */
+}
+
+.card-img-top {
+  width: 100%; /* Ensure image covers the card width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Block display for responsive images */
+}
+
+.card-body {
+  padding: 15px; /* Add padding around the card content */
+  text-align: center; /* Center-align the text */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Slightly larger font size for titles */
+  margin-bottom: 10px; /* Add spacing below the title */
+  color: #333; /* Darker text color for better contrast */
+}
+
+/* Button styles */
+.btn {
+  margin: 5px; /* Space between buttons */
+  padding: 10px 15px; /* Padding for the buttons */
+  font-size: 1rem; /* Base font size for buttons */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-primary {
+  background-color: #000; /* Primary blue color */
+  color: #fff; /* White text */
+}
+
+.btn-primary:hover {
+  background-color: #000; /* Darker blue on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 576px) {
+  .card {
+    max-width: 100%; /* Full width on small screens */
+    margin: 10px; /* Smaller margin */
+  }
+
+  .card-title {
+    font-size: 1rem; /* Smaller font size on small screens */
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons */
+    padding: 12px; /* Increased padding for touch targets */
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 768px) {
+  .card {
+    max-width: 400px; /* Larger card width on bigger screens */
+  }
+
+  .card-title {
+    font-size: 1.5rem; /* Larger font size for titles */
+  }
+
+  .btn {
+    font-size: 1.1rem; /* Larger button font size */
+  }
+}
