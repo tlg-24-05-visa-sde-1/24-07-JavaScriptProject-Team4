@@ -46,6 +46,10 @@ function CommonPage() {
 
   return (
     <div>
+<<<<<<< HEAD
+      <HeaderCommonRoom name="Gryffindor" />
+      <FriendCard />
+=======
       <PageHeader />
       {friendsList.length ? (
         friendsList.map((friendItem, index) => {
@@ -74,6 +78,7 @@ function CommonPage() {
             />
           );
         })} */}
+>>>>>>> main
     </div>
   );
 }
