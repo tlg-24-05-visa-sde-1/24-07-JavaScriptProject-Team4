@@ -24,16 +24,12 @@ export const Carousel = ({ data }) => {
         {data.map((item, index) => {
           return (
             <div
+              key={index}
               className={
                 slide === index ? "card slide" : "card slide slide-hidden"
               }
             >
-              <img
-                className="card-img-top"
-                src={item.image}
-                alt={item.name}
-                key={index}
-              />
+              <img className="card-img-top" src={item.image} alt={item.name} />
               <div className="card-body">
                 <h5 className="card-name">{item.name}</h5>
                 <h6 className="card-title">{item.house}</h6>
