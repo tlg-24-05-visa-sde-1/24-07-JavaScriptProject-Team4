@@ -6,6 +6,7 @@ function CommonRoom() {
   const [friends, setFriends] = useState([]);
   const [selectedFriends, setSelectedFriends] = useState([]);
   const [friendsList, setFriendsList] = useState([]);
+  const [carousel, setCarousel] = useState([]);
 
   function handleAddNewFriend() {
     let randIdx = Math.floor(Math.random() * friends.length);
@@ -17,7 +18,11 @@ function CommonRoom() {
     }
     if (selectedFriends.length !== friends.length) {
       setSelectedFriends([...selectedFriends, randIdx]);
-      setFriendsList([...friendsList, friends[randIdx]]);
+      // setSelectedFriends([randIdx]);
+      // setFriendsList([...friendsList, friends[randIdx]]);
+      setFriendsList([friends[randIdx]]);
+      setCarousel([...carousel, friends[randIdx]]);
+      console.log([...carousel, friends[randIdx]]);
     }
   }
 
@@ -34,10 +39,11 @@ function CommonRoom() {
   }, []);
 
   useEffect(() => {
-    const randIdx = Math.floor(Math.random() * friends.length);
+    let randIdx = Math.floor(Math.random() * friends.length);
 
     setSelectedFriends([randIdx]);
     friends.length && setFriendsList([friends[randIdx]]);
+    friends.length && setCarousel([friends[randIdx]]);
   }, [friends]);
 
   return (
