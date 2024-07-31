@@ -1,7 +1,7 @@
 function Header({ name }) {
   return (
     <>
-      <h1>{name} Commom Room</h1>
+      <h1 id={name}>{name}</h1>
     </>
   );
 }
