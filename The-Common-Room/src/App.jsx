@@ -1,10 +1,10 @@
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import GreatHall from "./Pages/GreatHall/GreatHall";
-import Gryffindor from "./Pages/CommonRooms/Gryffindor";
-import Hufflepuff from "./Pages/CommonRooms/Hufflepuff";
-import Ravenclaw from "./Pages/CommonRooms/Ravenclaw";
-import Slytherin from "./Pages/CommonRooms/Slytherin";
+import Gryffindor from "./Pages/CommonRooms/Gryffindor/Gryffindor";
+import Hufflepuff from "./Pages/CommonRooms/Hufflepuff/Hufflepuff";
+import Ravenclaw from "./Pages/CommonRooms/Ravenclaw/Ravenclaw";
+import Slytherin from "./Pages/CommonRooms/Slytherin/Slytherin";
 
 function App() {
   const audio = new Audio("/Harry_Potter_Theme_Song_Hedwigs_Theme.mp3");
