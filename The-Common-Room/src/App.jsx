@@ -1,49 +1,49 @@
-import {Link, Route, Routes} from "react-router-dom";
-import './App.css'
-import CommonPage from './Pages/CommonPage'
-import WelcomePage from './Pages/WelcomePage'
-import HufflepuffPage from './Pages/Hufflepuff'
-import RavenclawPage from './Pages/Ravenclaw'
-import SlytherinPage from './Pages/Slytherin'
+import { Link, Route, Routes } from "react-router-dom";
+import "./App.css";
+import GreatHall from "./Pages/GreatHall/GreatHall";
+import Gryffindor from "./Pages/CommonRooms/Gryffindor";
+import Hufflepuff from "./Pages/CommonRooms/Hufflepuff";
+import Ravenclaw from "./Pages/CommonRooms/Ravenclaw";
+import Slytherin from "./Pages/CommonRooms/Slytherin";
 
 function App() {
- 
   const audio = new Audio("/Harry_Potter_Theme_Song_Hedwigs_Theme.mp3");
 
   const playAudio = () => {
-    audio.play().then(() => {
-      console.log("Playing Music")
-    }).catch(error => {
-      console.error("Error playing", error);
-    })
-    
-  }
- 
+    audio
+      .play()
+      .then(() => {
+        console.log("Playing Music");
+      })
+      .catch((error) => {
+        console.error("Error playing", error);
+      });
+  };
 
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <ul>
           <li>
-            <Link onClick={playAudio} to="/">Home</Link>
+            <Link onClick={playAudio} to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/room">Common Room</Link>
+            <Link to="/gryffindor">Common Room</Link>
           </li>
         </ul>
       </nav>
 
       <Routes>
-        <Route path="/" element={<WelcomePage />} />
-        <Route path="/room" element={<CommonPage />} />
-        <Route path="/hufflepuff" element={<HufflepuffPage />} />
-        <Route path="/ravenclaw" element={<RavenclawPage />} />
-        <Route path="/slytherin" element={<SlytherinPage />} />
+        <Route path="/" element={<GreatHall />} />
+        <Route path="/gryffindor" element={<Gryffindor />} />
+        <Route path="/hufflepuff" element={<Hufflepuff />} />
+        <Route path="/ravenclaw" element={<Ravenclaw />} />
+        <Route path="/slytherin" element={<Slytherin />} />
       </Routes>
-      
-      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

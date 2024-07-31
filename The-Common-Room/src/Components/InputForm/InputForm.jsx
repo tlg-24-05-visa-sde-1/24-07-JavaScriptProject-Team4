@@ -6,13 +6,13 @@ function InputForm() {
   const navigate = useNavigate();
 
   let handleSelectChange = (e) => {
-      setValue(e.target.value)
-  }
+    setValue(e.target.value);
+  };
 
   let handleOnclick = () => {
     switch (value) {
       case "1":
-        navigate("/room");
+        navigate("/gryffindor");
         break;
       case "2":
         navigate("/hufflepuff");
@@ -24,11 +24,10 @@ function InputForm() {
         navigate("/slytherin");
         break;
       default:
-        navigate("/room");
+        navigate("/gryffindor");
         break;
     }
   };
-
 
   return (
     <>
@@ -55,7 +54,11 @@ function InputForm() {
           <label className="form-control" htmlFor="inputGroupSelect01">
             What is most important to you?
           </label>
-          <select className="form-select" id="inputGroupSelect01" onChange={handleSelectChange}>
+          <select
+            className="form-select"
+            id="inputGroupSelect01"
+            onChange={handleSelectChange}
+          >
             <option defaultValue>Choose...</option>
             <option value="1">Love</option>
             <option value="2">Wealth</option>
@@ -63,7 +66,12 @@ function InputForm() {
             <option value="4">Evil</option>
           </select>
         </div>
-        <input className="btn btn-primary" type="submit" value="Submit" onClick={handleOnclick}></input>
+        <input
+          className="btn btn-primary"
+          type="submit"
+          value="Submit"
+          onClick={handleOnclick}
+        ></input>
       </div>
     </>
   );
