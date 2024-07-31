@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import FriendCard from "../Components/FriendCard/FriendCard";
-import HeaderCommonRoom from "../Components/HeaderCommonRoom";
+import FriendCard from "../FriendCard/FriendCard";
+import Header from "../Header/Header";
 
-function CommonPage() {
+function CommonRoom() {
   const [friends, setFriends] = useState([]);
   const [selectedFriends, setSelectedFriends] = useState([]);
   const [friendsList, setFriendsList] = useState([]);
@@ -23,7 +23,9 @@ function CommonPage() {
 
   useEffect(() => {
     //fetch api results make api call
-    fetch("https://hp-api.onrender.com/api/characters/house/gryffindor")
+    fetch(
+      `https://hp-api.onrender.com/api/characters/house${location.pathname}`
+    )
       .then((response) => response.json())
       .then((data) => {
         const dataWithImages = data.filter((friend) => friend.image !== "");
@@ -40,7 +42,7 @@ function CommonPage() {
 
   return (
     <div>
-      <HeaderCommonRoom name="Gryffindor" />
+      <Header name={location.pathname.substring(1).toUpperCase} />
       {friendsList.length ? (
         friendsList.map((friendItem, index) => {
           return (
@@ -72,4 +74,4 @@ function CommonPage() {
   );
 }
 
-export default CommonPage;
+export default CommonRoom;
