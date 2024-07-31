@@ -7,13 +7,25 @@ import RavenclawPage from './Pages/Ravenclaw'
 import SlytherinPage from './Pages/Slytherin'
 
 function App() {
+ 
+  const audio = new Audio("/Harry_Potter_Theme_Song_Hedwigs_Theme.mp3");
+
+  const playAudio = () => {
+    audio.play().then(() => {
+      console.log("Playing Music")
+    }).catch(error => {
+      console.error("Error playing", error);
+    })
+    
+  }
+ 
 
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link onClick={playAudio} to="/">Home</Link>
           </li>
           <li>
             <Link to="/room">Common Room</Link>
