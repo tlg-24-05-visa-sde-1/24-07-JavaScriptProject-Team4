@@ -22,18 +22,13 @@ function App() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <ul>
-          <li>
-            <Link onClick={playAudio} to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/gryffindor">Common Room</Link>
-          </li>
-        </ul>
-      </nav>
+      <menu>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <Link onClick={playAudio} to="/">
+            Home
+          </Link>
+        </nav>
+      </menu>
 
       <Routes>
         <Route path="/" element={<GreatHall />} />

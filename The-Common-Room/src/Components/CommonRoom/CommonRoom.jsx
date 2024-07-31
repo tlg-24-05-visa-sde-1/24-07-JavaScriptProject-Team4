@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import FriendCard from "../FriendCard/FriendCard";
 import Header from "../Header/Header";
+import "./CommonRoom.css";
 
-function CommonRoom() {
+function CommonRoom({ houseName }) {
   const [friends, setFriends] = useState([]);
   const [selectedFriends, setSelectedFriends] = useState([]);
   const [friendsList, setFriendsList] = useState([]);
@@ -47,7 +48,7 @@ function CommonRoom() {
   }, [friends]);
 
   return (
-    <div>
+    <div className={houseName}>
       <Header name={location.pathname.substring(1).toUpperCase} />
       {friendsList.length ? (
         friendsList.map((friendItem, index) => {
