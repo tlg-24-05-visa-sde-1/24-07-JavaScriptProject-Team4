@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./InputForm.css";
+import { Link } from "react-router-dom";
+import { GiSpeaker } from "react-icons/gi";
 
 function InputForm() {
   const [value, setValue] = useState("");
@@ -28,6 +30,19 @@ function InputForm() {
         navigate("/gryffindor");
         break;
     }
+  };
+
+  const audio = new Audio("/Harry_Potter_Theme_Song_Hedwigs_Theme.mp3");
+
+  const playAudio = () => {
+    audio
+      .play()
+      .then(() => {
+        console.log("Playing Music");
+      })
+      .catch((error) => {
+        console.error("Error playing", error);
+      });
   };
 
   return (
@@ -60,12 +75,19 @@ function InputForm() {
             <option value="4">Evil</option>
           </select>
         </div>
-        <input
-          className="btn btn-primary"
-          type="submit"
-          value="Sort Me!"
-          onClick={handleOnclick}
-        ></input>
+          <div className="container">
+            <input
+              className="btn btn-primary"
+              type="submit"
+              value="Sort Me!"
+              onClick={handleOnclick}
+            ></input>
+            <span className="custom-nav">
+              <Link className="custom-link" onClick={playAudio} to="/">
+                <GiSpeaker />
+              </Link>
+            </span>
+          </div>
       </div>
     </>
   );
