@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import FriendCard from "../FriendCard/FriendCard";
 import Header from "../Header/Header";
-import "./CommonRoom.css";
 
 function CommonRoom({ houseName }) {
   const [friends, setFriends] = useState([]);
