@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./InputForm.css";
 
 function InputForm() {
   const [value, setValue] = useState("");
@@ -33,23 +34,16 @@ function InputForm() {
     <>
       <div id="form">
         <div className="form-floating mb-3">
-          <input
-            type="text"
-            className="form-control"
-            id="floatingInput"
-            placeholder="Name"
-          />
-          <label htmlFor="floatingInput">Name</label>
+          <div>
+            <input
+              type="text"
+              className="form-control"
+              id="floatingInput"
+              placeholder="Name"
+            />
+          </div>
         </div>
-        <div className="form-floating">
-          <input
-            type="text"
-            className="form-control"
-            id="floatingPassword"
-            placeholder="Snacky Snack"
-          />
-          <label htmlFor="floatingPassword">Favorite Snack</label>
-        </div>
+
         <div className="input-group mb-3">
           <label className="form-control" htmlFor="inputGroupSelect01">
             What is most important to you?
@@ -61,15 +55,15 @@ function InputForm() {
           >
             <option defaultValue>Choose...</option>
             <option value="1">Love</option>
-            <option value="2">Wealth</option>
-            <option value="3">Peace</option>
+            <option value="2">Peace</option>
+            <option value="3">Knowledge</option>
             <option value="4">Evil</option>
           </select>
         </div>
         <input
           className="btn btn-primary"
           type="submit"
-          value="Submit"
+          value="Sort Me!"
           onClick={handleOnclick}
         ></input>
       </div>
