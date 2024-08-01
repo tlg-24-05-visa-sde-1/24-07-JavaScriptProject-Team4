@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FriendCard from "../FriendCard/FriendCard";
 import Header from "../Header/Header";
+import "./CommonRoom.css";
 
 function CommonRoom({ houseName }) {
   const [friends, setFriends] = useState([]);
@@ -62,7 +63,7 @@ function CommonRoom({ houseName }) {
           );
         })
       ) : (
-        <h1>Loading</h1>
+        <h1 id="loading">Loading</h1>
       )}
       {/* {friendsList.length &&
         friendsList.map((friendItem, index) => {

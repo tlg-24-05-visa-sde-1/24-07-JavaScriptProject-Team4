@@ -4,12 +4,12 @@ import "./Hufflepuff.css";
 import { Carousel } from "../../../Components/Carousel/Carousel";
 import CrCarouselData from "../../../Components/CommonRoom/CommonRoomCarouselData";
 
-function Hufflepuff() {
-  let data = CrCarouselData({house: "hufflepuff"})
+function Hufflepuff({ houseName }) {
+  let data = CrCarouselData({ house: "hufflepuff" });
   return (
     <div>
       <Header name="Hufflepuff" />
-      <CommonRoom />
+      <CommonRoom houseName={"Hufflepuff"} />
       <Carousel data={data} />
     </div>
   );
