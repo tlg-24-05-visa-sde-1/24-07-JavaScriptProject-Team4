@@ -14,15 +14,26 @@ function GreatHall() {
     //   console.log(item);
     // });
     setData(data);
-  }
+  };
   fetchData();
-
 
   return (
     <div>
-      <InputForm />
-      {/* <CarouselData /> */}
-      <Carousel data={data}/>;
+      <span id="great-hall">
+        <div>
+          <InputForm />
+        </div>
+        <div>
+          <span id="carousel">
+            <p id="carousel-note">
+              Who might you meet in the halls of Hogwarts??
+            </p>
+            <div id="carousel-box">
+              <Carousel data={data} />
+            </div>
+          </span>
+        </div>
+      </span>
     </div>
   );
 }
