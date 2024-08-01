@@ -1,7 +1,7 @@
 import "./FriendCard.css";
 import { useNavigate } from "react-router-dom";
 
-export default function FriendCard({ name, house, image, handleAddNewFriend}) {
+export default function FriendCard({ name, house, image, handleAddNewFriend }) {
   let navigate = useNavigate();
   return (
     <div className="card">
@@ -11,9 +11,11 @@ export default function FriendCard({ name, house, image, handleAddNewFriend}) {
         <h6 className="card-title">{house}</h6>
 
         <button onClick={handleAddNewFriend} className="btn btn-primary">
-          Add New Friend
+          Look Around
         </button>
-        <button onClick={() => navigate("/")} className="btn btn-warning">Restart</button>
+        <button onClick={() => navigate("/")} className="btn btn-warning">
+          Sort Again
+        </button>
       </div>
     </div>
   );
